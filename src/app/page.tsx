@@ -3,14 +3,14 @@ import LoginForm from "@/components/LoginForm";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen">
+    <main className="flex min-h-screen bg-gradient-to-b">
       {/* Left side with illustration */}
       <div className="hidden lg:flex lg:w-1/2 bg-login-gradient items-center justify-center text-white relative">
         <LoginIllustration />
       </div>
 
       {/* Right side with login form */}
-      <div className="w-full lg:w-1/2 flex flex-col items-center justify-center p-8 bg-white">
+      <div className="w-full lg:w-1/2 flex flex-col items-center justify-center p-8">
         <LoginForm />
         
         {/* Footer */}

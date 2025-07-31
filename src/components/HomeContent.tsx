@@ -47,11 +47,11 @@ export default function HomeContent() {
         {/* Footer */}
         <footer className="absolute bottom-8 text-center text-gray-500 text-sm">
           <div className="mb-2 flex flex-wrap justify-center gap-x-4 gap-y-2">
-            <a href="#" className="hover:underline">English</a>
-            <a href="#" className="hover:underline">简体中文</a>
-            <a href="#" className="hover:underline">Español</a>
-            <a href="#" className="hover:underline">日本語</a>
-            <a href="#" className="hover:underline">Tiếng việt</a>
+            <a href="#" className="hover:text-black">English</a>
+            <a href="#" className="hover:text-black">简体中文</a>
+            <a href="#" className="hover:text-black">Español</a>
+            <a href="#" className="hover:text-black">日本語</a>
+            <a href="#" className="hover:text-black">Tiếng việt</a>
           </div>
           <p>© 2025 Bytebase. All rights reserved.</p>
         </footer>

@@ -1,17 +1,19 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Input } from './ui/Input';
 import { Button } from './ui/Button';
 import Logo from './ui/Logo';
 
 const LoginForm = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className="w-full max-w-sm rounded-lg">
-      <div className="flex justify-center items-center ">
+      <div className="flex justify-center items-center -mt-20">
         <Logo />
       </div>
-      <div className="border-1 border-gray-200 p-6 rounded-lg bg-white">
+      <div className="border-1 border-gray-200 p-6 rounded-lg bg-white -mt-10">
       <div className="mb-6 ">
         <button className="text-sm font-medium text-indigo-500 border-b-2">
           Standard
@@ -24,7 +26,7 @@ const LoginForm = () => {
             邮箱 <span className="text-red-500">*</span>
           </label>
           <div className="relative">
-            <Input type="email" id="email" className="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-purple" />
+            <Input type="email" id="email" placeholder="e.g. sam@example.com" className="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-purple" />
           </div>
         </div>
         
@@ -38,12 +40,23 @@ const LoginForm = () => {
             </a>
           </div>
           <div className="relative">
-            <Input type="password" id="password" className="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-purple" />
-            <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
-              <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18" />
-              </svg>
-            </div>
+            <Input type={showPassword ? "text" : "password"} id="password" className="w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-purple" />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute inset-y-0 right-0 pr-3 flex items-center"
+            >
+              {showPassword ? (
+                <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.522 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z" />
+                </svg>
+              ) : (
+                <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18" />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
         

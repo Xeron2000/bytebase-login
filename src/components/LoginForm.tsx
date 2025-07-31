@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { signIn } from "next-auth/react";
 import { Input } from './ui/Input';
 import { Button } from './ui/Button';
 import Logo from './ui/Logo';
@@ -19,7 +18,7 @@ const LoginForm = () => {
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
             邮箱 <span className="text-red-500">*</span>
           </label>
-          <Input type="email" id="email" placeholder="user@example.com" />
+          <Input type="email" id="email" placeholder="user@example.com" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-purple" />
         </div>
         {/* Password Input */}
         <div className="mb-6">
@@ -31,7 +30,7 @@ const LoginForm = () => {
               忘记密码？
             </a>
           </div>
-          <Input type="password" id="password" />
+          <Input type="password" id="password" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-purple" />
         </div>
         {/* Submit Button */}
         <Button type="submit" className="w-full">
@@ -43,13 +42,6 @@ const LoginForm = () => {
         <span className="flex-shrink mx-4 text-gray-400">Or</span>
         <div className="flex-grow border-t border-gray-300"></div>
       </div>
-      <Button
-        variant="outline"
-        className="w-full"
-        onClick={() => signIn("github")}
-      >
-        Sign in with GitHub
-      </Button>
       <p className="text-center text-sm text-gray-500 mt-6">
         第一次使用 Bytebase？ <a href="#" className="text-primary-purple hover:underline">注册</a>
       </p>

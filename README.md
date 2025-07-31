@@ -14,7 +14,7 @@
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/your-username/bytebase-login.git
+git clone https://github.com/Xeron2000/bytebase-login.git
 cd bytebase-login
 ```
 

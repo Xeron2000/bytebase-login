@@ -45,7 +45,7 @@ export default function HomeContent() {
         <LoginForm />
         
         {/* Footer */}
-        <footer className="absolute bottom-8 text-center text-gray-500 text-sm">
+        <footer className="text-center text-gray-500 text-sm mt-8">
           <div className="mb-2 flex flex-wrap justify-center gap-x-4 gap-y-2">
             <a href="#" className="hover:text-black">English</a>
             <a href="#" className="hover:text-black">简体中文</a>

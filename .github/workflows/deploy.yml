@@ -35,9 +35,7 @@ jobs:
         run: pnpm install
         shell: bash
       - name: Build with Next.js
-        run: |
-          rm -rf src/app/api
-          pnpm next build
+        run: pnpm run build:static
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

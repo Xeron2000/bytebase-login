@@ -62,7 +62,7 @@ const LoginForm = () => {
         variant="outline"
         className="w-full"
         onClick={() => {
-          const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}&redirect_uri=${process.env.NEXT_PUBLIC_APP_URL}/api/auth/github/callback&scope=read:user,user:email`;
+          const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}&redirect_uri=${process.env.NEXT_PUBLIC_API_URL}/api/auth/github/callback&scope=read:user,user:email`;
           window.location.href = githubAuthUrl;
         }}
       >

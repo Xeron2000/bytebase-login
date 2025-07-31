@@ -5,7 +5,7 @@ const LoginIllustration = () => {
   return (
     <div className="w-full h-full relative">
       <Image
-        src="https://p.sda1.dev/26/26ee9fdba87c414f8c017e6dea74395e/signin-DHfUrNZ8.webp"
+        src="https://raw.githubusercontent.com/Xeron2000/bytebase-login/refs/heads/main/public/images/signin-DHfUrNZ8.jpg"
         alt="Login Illustration"
         layout="fill"
         objectFit="cover"

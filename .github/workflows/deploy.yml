@@ -35,6 +35,9 @@ jobs:
         run: pnpm install
         shell: bash
       - name: Build with Next.js
+        env:
+          NEXT_PUBLIC_API_URL: ${{ vars.NEXT_PUBLIC_API_URL }}
+          NEXT_PUBLIC_GITHUB_CLIENT_ID: ${{ vars.NEXT_PUBLIC_GITHUB_CLIENT_ID }}
         run: pnpm run build:static
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

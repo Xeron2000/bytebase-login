@@ -40,7 +40,7 @@ pnpm install
 ```
 NEXT_PUBLIC_GITHUB_CLIENT_ID=你的_GITHUB_CLIENT_ID
 GITHUB_CLIENT_SECRET=你的_GITHUB_CLIENT_SECRET
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:3000
 ```
 
 ### 4. 运行开发服务器
@@ -60,6 +60,6 @@ pnpm dev
 3.  **配置环境变量**: 在您的 Vercel 项目设置中 (**Settings > Environment Variables**)，添加与您在 `.env.local` 文件中相同的三个变量：
     *   `NEXT_PUBLIC_GITHUB_CLIENT_ID`
     *   `GITHUB_CLIENT_SECRET`
-    *   `NEXT_PUBLIC_APP_URL` (请将其值设置为您的 Vercel 生产环境 URL, 例如, `https://your-project.vercel.app`)
+    *   `NEXT_PUBLIC_API_URL` (请将其值设置为您的 Vercel 生产环境 URL, 例如, `https://your-project.vercel.app`)
 4.  **更新 GitHub OAuth App**: 回到您的 GitHub OAuth App 设置页面，并将 **Authorization callback URL** 更新为您的 Vercel 生产环境 URL：`https://your-project.vercel.app/api/auth/github/callback`。
 5.  **部署**: 在 Vercel 上触发一次新的部署。您的网站现已上线！

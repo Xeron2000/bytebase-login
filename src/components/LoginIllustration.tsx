@@ -1,15 +1,15 @@
 import React from 'react';
-import Image from 'next/image';
 
 const LoginIllustration = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
     <div className="w-full h-full relative">
-      <Image
-        src="/images/signin-DHfUrNZ8.jpg"
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`${basePath}/images/signin-DHfUrNZ8.jpg`}
         alt="Login Illustration"
-        fill
-        priority
-        className="object-cover"
+        className="w-full h-full object-cover"
       />
     </div>
   );

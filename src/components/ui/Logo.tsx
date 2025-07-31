@@ -1,11 +1,13 @@
 import React from 'react';
-import Image from 'next/image';
 
 const Logo = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
     <div className="flex items-center ">
-      <Image
-        src="/images/logo-full-B93Z8uvR.svg"
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`${basePath}/images/logo-full-B93Z8uvR.svg`}
         alt="Bytebase Logo"
         width={40}
         height={40}

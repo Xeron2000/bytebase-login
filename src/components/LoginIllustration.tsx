@@ -7,9 +7,9 @@ const LoginIllustration = () => {
       <Image
         src="https://raw.githubusercontent.com/Xeron2000/bytebase-login/refs/heads/main/public/images/signin-DHfUrNZ8.jpg"
         alt="Login Illustration"
-        layout="fill"
-        objectFit="cover"
+        fill
         priority
+        className="object-cover"
       />
     </div>
   );
